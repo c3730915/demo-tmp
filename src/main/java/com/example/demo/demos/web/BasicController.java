@@ -40,8 +40,8 @@ public class BasicController {
     @ResponseBody
     public User user() {
         User user = new User();
-        user.setName("theonefx");
-        user.setAge(666);
+        user.setName( "theonefx" );
+        user.setAge( 666 );
         return user;
     }
 
@@ -54,14 +54,14 @@ public class BasicController {
 
     // http://127.0.0.1:8080/html
     @RequestMapping("/html")
-    public String html(){
+    public String html() {
         return "index.html";
     }
 
     @ModelAttribute
     public void parseUser(@RequestParam(name = "name", defaultValue = "unknown user") String name
             , @RequestParam(name = "age", defaultValue = "12") Integer age, User user) {
-        user.setName("zhangsan");
-        user.setAge(18);
+        user.setName( "zhangsan" );
+        user.setAge( 18 );
     }
 }
